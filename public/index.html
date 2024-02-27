@@ -25,11 +25,15 @@
         <div class="image-holder">
             <img src="profile.jpg" alt="Soroush">
         </div>
+        <div class="under-construction">
+            <p>This website is currently under development. Some features may not be available yet. Please check back later.</p>
+        </div>
         <section id="about">
             <h2>About Me</h2>
-            <div id="container">
-                <p id="text"></p>
+            <div class="container">
+                <textarea id="text" readonly></textarea>
             </div>
+        
             <script src="script.js"></script>
         </section>
         <section id="projects">
@@ -62,7 +66,25 @@ Skills: OCaml · maxima · Linux · Functional Programming · recursion
             <h3>Hobbies</h3>
             <h4>Chess: chess.com id : soshiagh</h4>
         </section>
-
+        <section id="qanda">
+            <h2>Q&A</h2>
+            <div class="qa-container">
+                <input type="text" id="question-input" placeholder="Ask me anything...">
+                <button id="ask-button">Ask</button>
+                <div id="answer-display"></div>
+            </div>
+        </section>
+        <script src="ai.js"></script> <!-- Include ai.js -->
+        <script>
+            // Add event listener to the "Ask" button
+            document.getElementById('ask-button').addEventListener('click', function() {
+                // Get the user's question from the input field
+                var question = document.getElementById('question-input').value;
+    
+                // Call the askQuestion function from ai.js
+                askQuestion(question);
+            });
+        </script>
         <!-- Add more sections for projects, skills, etc. -->
 
     </main>
