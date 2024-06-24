@@ -8,7 +8,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(session({
-  secret: 'your_secret_key', // Replace with a secure key
+  secret: process.env.REACT_APP_API_KEY, // Replace with a secure key
   resave: false,
   saveUninitialized: true
 }));
