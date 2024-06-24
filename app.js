@@ -18,7 +18,7 @@ app.use(express.static('public'));
 
 // Initialize OpenAI API client
 const configuration = new Configuration({
-  apiKey: 'sk-proj-bKTlu9jYssqtMrsbjeyjT3BlbkFJsxqrKYwoKuqn8rHy9CcZ',
+  apiKey: process.env.REACT_APP_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
