@@ -18,7 +18,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY, // Replace with your OpenAI API key
+  apiKey: process.env.AK, // Replace with your OpenAI API key
 });
 const openai = new OpenAIApi(configuration);
 
